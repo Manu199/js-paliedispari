@@ -27,6 +27,8 @@ while (true) {
     unumber = prompt('Scegli un numero tra 1 e 5:');
     console.log(unumber);
 
+    number = parseInt(unumber);
+
     if (unumber >= 1 && unumber <= 5) {
         break; 
     } else {
@@ -48,6 +50,22 @@ function generaNumeroCasualeTraUnoECinque() {
 let numeroCasuale = generaNumeroCasualeTraUnoECinque();
 console.log(numeroCasuale);
 
-const somma =  numeroCasuale + unumber;
+const somma =  numeroCasuale + number;
 
 console.log(somma);
+
+const isPari = somma % 2 === 0;
+
+let win;
+
+if ((paridispari === 'pari' && isPari) || (paridispari === 'dispari' && !isPari)) {
+  win = 'Utente';
+} else {
+  win = 'Computer';
+}
+
+console.log(`${win} ha vinto`);
+
+document.getElementById('output').innerHTML = `${win} ha vinto!!!` 
+// + ' ' + ' ' + ' ' + 'Numero scelto da te '+ number + '  ' + ' ' + ' ' + 'Numero generato dal computer' + ' ' + numeroCasuale + ' ' + ' ' + ' ' + 'E hai scelto' + ' ' + paridispari;
+
