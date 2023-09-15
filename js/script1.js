@@ -7,12 +7,47 @@
 - stampare sull'html se ha vinto l'utente o il computer.
 */
 
-const paridispari = prompt('scegliere tra pari e dispar');
+let paridispari;
+
+while (true) {
+  paridispari = prompt('Scegli tra pari e dispari:').toLowerCase();
+
+  if (paridispari === 'pari' || paridispari === 'dispari') {
+    break;
+  } else {
+    alert('Devi scegliere tra pari e dispari. Riprova.');
+  }
+}
+
 console.log(paridispari);
 
-const unumber = prompt('scegliere un numero tra 1 e 5 per il');
-console.log(unumber);
+let unumber;
 
-var numeroComputer = Math.floor(Math.random() * 5) + 1;
-console.log(numeroComputer);
+while (true) {
+    unumber = prompt('Scegli un numero tra 1 e 5:');
+    console.log(unumber);
 
+    if (unumber >= 1 && unumber <= 5) {
+        break; 
+    } else {
+        alert('Devi scegliere un numero tra 1 e 5.');
+    }
+}
+
+
+function generaNumeroCasualeTraUnoECinque() {
+  const numeroCasuale = Math.random();
+
+  const numeroTra0E4 = numeroCasuale * 5;
+
+  const numeroTra1E5 = Math.floor(numeroTra0E4) + 1;
+
+  return numeroTra1E5;
+}
+
+let numeroCasuale = generaNumeroCasualeTraUnoECinque();
+console.log(numeroCasuale);
+
+const somma =  numeroCasuale + unumber;
+
+console.log(somma);

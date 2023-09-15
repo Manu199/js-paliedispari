@@ -20,6 +20,3 @@ if (parola === reversestring(parola)) {
 else {
   document.getElementById('output').innerHTML = 'La parola non è Palindroma'
 }
-
-
-
