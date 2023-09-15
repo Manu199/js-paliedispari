@@ -16,6 +16,10 @@ console.log(reversestring(parola));
 
 if (parola === reversestring(parola)) {
   document.getElementById('output').innerHTML = 'La parola è Palindroma'
-}else {
+}
+else {
   document.getElementById('output').innerHTML = 'La parola non è Palindroma'
 }
+
+
+
